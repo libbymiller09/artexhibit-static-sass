@@ -10,3 +10,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // makes 1 rem = 10px
 }
+
+body {
+  font-family: $default-font;
+}
