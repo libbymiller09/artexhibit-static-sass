@@ -52,6 +52,38 @@
     width: 100%;
   }
 
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3.5rem;
+      font-weight: lighter;
+      padding: 2rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      // background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      background-size: 220%;
+      transition: all .4s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+  }
+
   // Functionality of nav button
   &__checkbox:checked ~ &__background {
     transform: scale(80);

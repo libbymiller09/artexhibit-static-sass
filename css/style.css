@@ -68,6 +68,28 @@ html {
   text-align: center;
   width: 100%; }
 
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: lighter;
+  padding: 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-size: 220%;
+  transition: all .4s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1.5rem;
+    display: inline-block; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #ff235a;
+  transform: translateX(1rem); }
+
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
 
