@@ -13,11 +13,12 @@ html {
 
 body {
   font-family: $default-font;
+  padding: 0 2rem;
 }
 
 .container {
-  display: grid;
+  display: grid; 
   grid-template-rows: 80vh min-content repeat(2, min-content);
   grid-template-columns: repeat(4, [col-start] 1fr) [col-end];
-  // grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 20rem [grid-end];
 }
+
