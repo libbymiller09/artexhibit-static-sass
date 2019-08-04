@@ -40,21 +40,12 @@
     }
   }
 
-  &--green {
-    background-color: $color-secondary;
-    color: $color-grey-dark;
+  &--blue {
+    background-color: $color-tertiary-dark;
+    color: $color-white;
 
     &::after {
-      backface-visibility: $color-secondary-light;
-    }
-  }
-
-  &--pink {
-    background-color: $color-primary;
-    color: $color-grey-dark;
-
-    &::after {
-      backface-visibility: $color-primary-light;
+      backface-visibility: $color-tertiary-light;
     }
   }
 

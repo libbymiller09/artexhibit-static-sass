@@ -76,17 +76,11 @@ body {
   .btn--white::after {
     backface-visibility: #fff; }
 
-.btn--green {
-  background-color: #55c57a;
-  color: #777; }
-  .btn--green::after {
-    backface-visibility: #7ed56f; }
-
-.btn--pink {
-  background-color: #ff235a;
-  color: #777; }
-  .btn--pink::after {
-    backface-visibility: #f4144c62; }
+.btn--blue {
+  background-color: #5643fa;
+  color: #fff; }
+  .btn--blue::after {
+    backface-visibility: #2998ff; }
 
 .btn::after {
   content: "";
@@ -107,8 +101,10 @@ body {
 .features {
   grid-row: 3 / 4;
   grid-column: 1 / -1;
+  justify-self: center;
   padding: 20rem 0 5rem 0;
-  margin-top: -15rem; }
+  margin-top: -15rem;
+  position: relative; }
   .features__heading {
     font-size: 3rem;
     text-transform: uppercase;
@@ -119,40 +115,34 @@ body {
     background-clip: text;
     color: transparent;
     letter-spacing: 2px;
-    transition: all .2s; }
+    transition: all .2s;
+    padding-bottom: 4rem; }
     .features__heading:hover {
       transform: translateY(-1rem) scale(1.1);
       text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .card {
-  perspective: 150rem;
   position: relative;
-  height: 52rem; }
-  .card__1, .card__2 {
-    height: 52rem;
-    position: absolute;
-    width: 40%;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
-  .card__1 {
-    left: 0;
-    top: 0; }
-  .card__2 {
-    right: 0;
-    top: 0; }
+  height: 50rem;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 2rem;
+  background-color: #2998ff4c;
+  transition: all .2s; }
   .card__picture {
     background-size: cover;
-    height: 23rem;
+    height: 25rem;
     background-blend-mode: screen;
     -webkit-background-blend-mode: screen;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     border-top-left-radius: 3px;
-    border-top-right-radius: 3px; }
-    .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../images/feature-1.jpg); }
-    .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #f4144c62, #b80834), url(../images/feature-2.jpg); }
+    border-top-right-radius: 3px;
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../images/feature-1.jpg); }
   .card__heading {
     font-size: 2rem;
     font-weight: 300;
@@ -160,19 +150,17 @@ body {
     text-align: center;
     color: #fff;
     position: absolute;
-    top: 15rem;
-    right: 3rem;
+    top: 12rem;
+    right: 6.75rem;
     width: 75%; }
   .card__heading-span {
     padding: 1rem 2rem;
     -webkit-decoration-break: clone;
-    box-decoration-break: clone; }
-    .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
-    .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(244, 20, 76, 0.85), rgba(184, 8, 52, 0.85)); }
+    box-decoration-break: clone;
+    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    color: #5643fa; }
     .card__details ul {
       list-style: none;
       width: 80%;
@@ -183,19 +171,10 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
-  .card__button {
-    position: absolute;
-    right: -10rem; }
-    .card__button--green {
-      background-color: #55c57a;
-      color: #fff; }
-      .card__button--green::after {
-        backface-visibility: #7ed56f; }
-    .card__button--pink {
-      background-color: #ff235a;
-      color: #fff; }
-      .card__button--pink::after {
-        backface-visibility: #f4144c62; }
+  .card:hover {
+    outline: 1.5rem solid #5643fa;
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
 
 .gallery {
   grid-row: 4 / 5;

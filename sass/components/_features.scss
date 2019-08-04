@@ -1,9 +1,11 @@
 .features {
   grid-row: 3 / 4;
   grid-column: 1 / -1;
+  justify-self: center;
 
   padding: 20rem 0 5rem 0;
   margin-top: -15rem;
+  position: relative;
   
   &__heading {
     font-size: 3rem;
@@ -16,57 +18,38 @@
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+    padding-bottom: 4rem;
 
     &:hover {
       transform: translateY(-1rem) scale(1.1);
-      // transform: skewY(2deg) skewX(15deg) scale(1.1);
       text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
   }
 }
 
 .card {
-  // Add functionality
-  perspective: 150rem;
   position: relative;
-  height: 52rem;
-
-  &__1,
-  &__2 {
-    height: 52rem;
-    position: absolute;
-    width: 40%;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
-  }
-  
-  &__1 {
-    left: 0;
-    top: 0;
-  }
-
-  &__2 {
-    right: 0;
-    top: 0;
-  }
+  height: 50rem;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 2rem 4rem rgba($color-black, .2);
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 2rem;
+  background-color: $color-tertiary-lighter; 
+  transition: all .2s;
 
   &__picture {
     background-size: cover;
-    height: 23rem;
+    height: 25rem;
     background-blend-mode: screen;
     -webkit-background-blend-mode: screen;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-
-    &--1 {
-      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/feature-1.jpg);
-    }
-
-    &--2 {
-      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../images/feature-2.jpg);
-    }
+    background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../images/feature-1.jpg);
   }
 
   &__heading {
@@ -76,8 +59,8 @@
     text-align: center;
     color: $color-white;
     position: absolute;
-    top: 15rem;
-    right: 3rem;
+    top: 12rem;
+    right: 6.75rem;
     width: 75%
   }
 
@@ -85,18 +68,12 @@
     padding: 1rem 2rem;
     -webkit-decoration-break: clone;
     box-decoration-break: clone;
-
-    &--1 {
-      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
-    }
-
-    &--2 {
-      background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
-    }
+    background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
   }
 
   &__details {
     padding: 2.5rem;
+    color: $color-tertiary-dark;
 
     ul {
       list-style: none;
@@ -115,27 +92,9 @@
     }
   }
 
-  &__button {
-    // display: inline-block;
-    position: absolute;
-    right: -10rem;
-
-    &--green {
-      background-color: $color-secondary;
-      color: $color-white;
-    
-      &::after {
-        backface-visibility: $color-secondary-light;
-      }
-    }
-    
-    &--pink {
-      background-color: $color-primary;
-      color: $color-white;
-    
-      &::after {
-        backface-visibility: $color-primary-light;
-      }
-    }
+  &:hover {
+    outline: 1.5rem solid $color-tertiary-dark;
+    transform: scale(1.05) translateY(-.5rem);
+    box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
   }
 }
