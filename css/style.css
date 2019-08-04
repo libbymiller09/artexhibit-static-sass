@@ -64,8 +64,7 @@ html {
       font-size: 75%; } }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  padding: 0 2rem; }
+  font-family: "Open Sans", sans-serif; }
 
 .container {
   display: grid;
